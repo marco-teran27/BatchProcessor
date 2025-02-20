@@ -1,17 +1,16 @@
 using System.Text.Json.Serialization;
 
 /*
-File: BatchProcessor\Core\Config\Models\config_Structure.cs
 Summary: Represents the top‐level JSON structure for the configuration file.
          Consolidates all sub‐models (directories, script settings, etc.) for one‐pass JSON parsing.
 */
 
-namespace BatchProcessor.Core.Config.Models
+namespace ConfigJSON.Models
 {
     /// <summary>
     /// Represents the complete configuration structure for batch processing.
     /// </summary>
-    public class config_Structure
+    public class ConfigStructure
     {
         /// <summary>
         /// Project name specified in the JSON config.

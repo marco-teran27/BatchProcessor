@@ -10,7 +10,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model contains the timeout value (in minutes) for batch processing.
 /// Validation is handled through the TimeOutValidator in the validation modules.
 /// </summary>
-namespace BatchProcessor.Core.Config.Models
+namespace ConfigJSON.Models
 {
     public class TimeOutSettings
     {

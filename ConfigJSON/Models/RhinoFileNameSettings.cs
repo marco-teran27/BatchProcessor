@@ -10,7 +10,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model holds the configuration for Rhino file name filtering (mode and keywords).
 /// All validation should be performed via the RhinoFileNameValidator in the validation modules.
 /// </summary>
-namespace BatchProcessor.Core.Config.Models
+namespace ConfigJSON.Models
 {
     public class RhinoFileNameSettings
     {

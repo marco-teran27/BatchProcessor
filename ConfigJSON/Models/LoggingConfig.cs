@@ -4,12 +4,11 @@ using System.IO;
 using BatchProcessor.Core.Config.Validation;
 
 /*
-File: BatchProcessor\Core\Config\Models\config_Logging.cs
 Summary: Represents logging configuration settings that control how logging is managed.
          Provides a Validate() method to check configuration integrity, returning a ValidationResult.
 */
 
-namespace BatchProcessor.Core.Config.Models
+namespace ConfigJSON.Models
 {
     /// <summary>
     /// Represents configuration settings for logging.

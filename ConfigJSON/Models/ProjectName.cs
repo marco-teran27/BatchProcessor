@@ -6,7 +6,7 @@ Summary: Holds the project name as defined in the JSON config and the actual con
          Used for validating that the file name embeds the correct project name.
 */
 
-namespace BatchProcessor.Core.Config.Models
+namespace ConfigJSON.Models
 {
     /// <summary>
     /// Represents the project name configuration.
