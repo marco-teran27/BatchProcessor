@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhino", "BatchProcessorRhino\Rhino.csproj", "{4D84DA79-295C-13EA-2B25-FA40ECCE79A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCore", "BatchProcessorRhino\RhinoCore.csproj", "{4D84DA79-295C-13EA-2B25-FA40ECCE79A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchProcessor", "BatchProcessor\BatchProcessor.csproj", "{83266286-4160-49D9-ABEA-36496E0AB11A}"
 	ProjectSection(ProjectDependencies) = postProject

@@ -1,37 +1,38 @@
-using Rhino;
 using Rhino.Commands;
 using System;
 using System.Threading;
-using BatchProcessor.DI.Interfaces.AbsRhino;
-using BatchProcessor.Core.Services;
+using BatchProcessor.DI.Interfaces;
 using BatchProcessorRhino.Plugin;
-using Microsoft.Extensions.DependencyInjection;
+using Rhino;
 
-namespace BatchProcessorRhino.CommandLine
+namespace RhinoCore.CommandLine
 {
+    /// <summary>
+    /// Rhino command to initiate batch processing via "BatchProcessor".
+    /// </summary>
     public class CommLineCommand : Command
     {
+        /// <summary>
+        /// Gets the command name as it appears in Rhino.
+        /// </summary>
         public override string EnglishName => "BatchProcessor";
 
+        /// <summary>
+        /// Executes the batch processing command.
+        /// </summary>
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
             try
             {
-                var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<TheOrchestrator>();
-                if (orchestrator == null)
-                {
-                    RhinoApp.WriteLine("Failed to initialize batch orchestrator.");
-                    return Result.Failure;
-                }
-
-                // Run the orchestrator with a cancellation token
+                var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<IBatchOrchestrator>()
+                    ?? throw new InvalidOperationException("Failed to resolve IBatchOrchestrator.");
                 using var cts = new CancellationTokenSource();
-                bool success = orchestrator.RunFullBatchProcessAsync(cts.Token).GetAwaiter().GetResult();
-                return success ? Result.Success : Result.Cancel;
+                bool success = orchestrator.RunBatchAsync(null, cts.Token).GetAwaiter().GetResult();
+                return success ? Result.Success : Result.Failure;
             }
             catch (Exception ex)
             {
-                RhinoApp.WriteLine($"Command execution failed: {ex.Message}");
+                RhinoApp.WriteLine($"BatchProcessor failed: {ex.Message}");
                 return Result.Failure;
             }
         }

@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using BatchProcessor.DI.Interfaces.AbsRhino;
 using BatchProcessor.DI.Interfaces.Logging;
-using BatchProcessor.Core.Services;
 
 namespace BatchProcessor.Core.IO.Command
 {

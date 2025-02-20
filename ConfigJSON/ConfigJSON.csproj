@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0-windows</TargetFramework>
@@ -18,6 +18,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\BatchProcessor\BatchProcessor.csproj" />
+		<ProjectReference Include="..\RhinoCore\RhinoCore.csproj" />
+		<ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
 		<ProjectReference Include="..\Commons\Commons.csproj" />
 	</ItemGroup>
 

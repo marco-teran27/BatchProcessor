@@ -1,59 +1,45 @@
+// File: BatchProcessor.DI\DIContainerConfig.cs
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using BatchProcessor.DI.Interfaces.AbsRhino;
-using BatchProcessor.DI.Interfaces.Batch;
-using BatchProcessor.DI.Interfaces.Config;
-using BatchProcessor.DI.Interfaces.Logging;
-using BatchProcessor.DI.Interfaces.Monitoring;
-using BatchProcessor.DI.Interfaces.Services;
-using BatchProcessor.DI.Interfaces.Script;
-using BatchProcessor.Di.Interfaces.AbsRhino;
+using BatchProcessor.Core;
+using BatchProcessor.DI.Interfaces;
+using BatchProcessorRhino.Services;
+using ConfigJSON;
+using DI.Interfaces;
 
 namespace BatchProcessor.DI
 {
+    /// <summary>
+    /// Configures dependency injection for the batch processor.
+    /// </summary>
     public static class DIContainerConfig
     {
-        public static IServiceProvider ConfigureServices(IServiceCollection services, bool useRhino = true)
+        /// <summary>
+        /// Configures services for the application.
+        /// </summary>
+        /// <param name="useRhino">True to use Rhino integration; false for no-op.</param>
+        public static IServiceProvider ConfigureServices(bool useRhino = true)
         {
-            // Add logging
-            services.AddLogging(configure => configure.AddConsole());
+            var services = new ServiceCollection();
 
-            // Register no-op implementations as defaults (overridden if useRhino = false)
-            services.AddSingleton<IRhinoApp, NoOpRhinoApp>();
-            services.AddSingleton<ICommLineOut, NoOpCommLineOut>();
-            services.AddSingleton<ICommInDelegation, NoOpCommInDelegation>();
+            // Config pipeline
+            services.AddSingleton<ConfigSelector>();
+            services.AddSingleton<ConfigParser>();
+            services.AddSingleton<ITheOrchestrator, TheOrchestrator>();
 
-            if (!useRhino)
-            {
-                // Ensure no-op implementations are used in non-Rhino mode
-                services.AddSingleton<IRhinoApp, NoOpRhinoApp>();
-                services.AddSingleton<ICommLineOut, NoOpCommLineOut>();
-                services.AddSingleton<ICommInDelegation, NoOpCommInDelegation>();
-            }
+            // Rhino integration
+            services.AddSingleton<IRhinoCommOut>(useRhino ? new RhinoAppWrapper() : new NoOpRhinoCommOut());
 
-            // Caller (e.g., BatchProcessorPlugin) will register specific implementations
             return services.BuildServiceProvider();
         }
     }
 
-    public class NoOpCommLineOut : ICommLineOut
+    /// <summary>
+    /// No-op implementation for non-Rhino environments.
+    /// </summary>
+    internal class NoOpRhinoCommOut : IRhinoCommOut
     {
-        public void ShowDependencyStatus(IEnumerable<(string Item, string Status)> dependencies) { }
-        public void UpdateProgress(int current, int total, string currentFile, TimeSpan estimatedTimeRemaining) { }
-        public void ShowError(string message) { }
+        public bool RunScript(string script, bool echo) => true;
         public void ShowMessage(string message) { }
-        public void Clear() { }
-    }
-
-    public class NoOpCommInDelegation : ICommInDelegation
-    {
-        public Task<bool> InitiateCommand() => Task.FromResult(true);
-        public void HandleCancellation() { }
-        public bool IsCommandActive => false;
-    }
-
-    public class NoOpRhinoApp : IRhinoApp
-    {
-        public bool RunScript(string command, bool echo) => false;
+        public void ShowError(string message) { }
     }
 }
