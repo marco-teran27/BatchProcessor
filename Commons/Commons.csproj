@@ -12,8 +12,4 @@
 		<Prefer32Bit>false</Prefer32Bit>
 	</PropertyGroup>
 
-	<ItemGroup>
-
-	</ItemGroup>
-
 </Project>
