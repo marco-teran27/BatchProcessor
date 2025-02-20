@@ -15,13 +15,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="NUnit" Version="3.14.0" />
     <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+	<PackageReference Include="Moq" Version="4.20.70" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,7 +28,9 @@
 
   <ItemGroup>
 	<ProjectReference Include="..\BatchProcessor\BatchProcessor.csproj" />
-	<ProjectReference Include="..\BatchProcessor.DI\BatchProcessor.DI.csproj" />
+	 <ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
+	 <ProjectReference Include="..\Commons\Commons.csproj" />
+	<ProjectReference Include="..\DI\DI.csproj" />
   </ItemGroup>
 
 </Project>
