@@ -1,0 +1,12 @@
+{
+    "profiles": {
+        "BatchProcessor.Tests": {
+            "commandName": "Project",
+            "commandLineArgs": "/netcore",
+            "workingDirectory": "C:\\Users\\marco.teran\\source\\repos\\BatchProcessor\\BatchProcessor.Tests\\bin\\Debug\\net7.0-windows",
+            "environmentVariables": {
+                "COREHOST_TRACE": "1"
+            }
+        }
+    }
+}

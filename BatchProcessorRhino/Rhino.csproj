@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+  <PropertyGroup>
+    <!-- Select the framework(s) you wish to target.
+        Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
+        Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
+    -->
+    <TargetFramework>net7.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <TargetExt>.rhp</TargetExt>
+    <NoWarn>NU1701</NoWarn>
+    
+	<!-- Enforce a 64 Bit build -->
+	<Platforms>AnyCPU;x64</Platforms>
+	<Prefer32Bit>false</Prefer32Bit> 
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <!-- Specifies information for Assembly and Yak -->
+    <Version>1.0</Version>
+    <Title>BatchProcessor</Title>
+    <Company>TomiDoki Authors</Company>
+    <Description>Processes Rhino Cohorts Based on Patient IDs</Description>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="RhinoCommon" Version="8.16.25042.13001" ExcludeAssets="runtime" />
+  </ItemGroup>
+	
+</Project>

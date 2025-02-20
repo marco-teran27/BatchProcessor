@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+	<!-- Path to the Rhino 8 system folder -->
+	<RhinoSystemDirectory>C:\Program Files\Rhino 8\System</RhinoSystemDirectory>
+
+	<!-- Directory for any test files you want to use -->
+	<TestFilesDirectory>C:\Users\marco.teran\source\repos\BatchProcessor\BatchProcessor.RhinoTests\Tests</TestFilesDirectory>
+
+	<!-- Create a headless Rhino document for testing -->
+	<CreateRhinoDoc>true</CreateRhinoDoc>
+
+	<!-- Disable view creation to keep tests fast and headless -->
+	<CreateRhinoView>false</CreateRhinoView>
+</Settings>
