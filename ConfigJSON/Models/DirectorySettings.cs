@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Commons;
-using BatchProcessor.DI.Interfaces;
 
 namespace ConfigJSON.Models
 {

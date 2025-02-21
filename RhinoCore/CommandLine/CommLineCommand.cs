@@ -1,27 +1,17 @@
-// File: RhinoCore\CommandLine\CommLineCommand.cs
-using Rhino.Commands;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading;
-using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
-using RhinoCore.Plugin;
-using Microsoft.Extensions.DependencyInjection;
 using Rhino;
+using Rhino.Commands;
+using RhinoCore.Plugin;
+using Commons.Interfaces;
 
 namespace RhinoCore.CommandLine
 {
-    /// <summary>
-    /// Rhino command to initiate batch processing via "BatchProcessor".
-    /// </summary>
     public class CommLineCommand : Command
     {
-        /// <summary>
-        /// Gets the command name as it appears in Rhino.
-        /// </summary>
         public override string EnglishName => "BatchProcessor";
 
-        /// <summary>
-        /// Executes the batch processing command.
-        /// </summary>
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
             try
@@ -29,7 +19,7 @@ namespace RhinoCore.CommandLine
                 var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<ITheOrchestrator>()
                     ?? throw new InvalidOperationException("Failed to resolve ITheOrchestrator.");
                 using var cts = new CancellationTokenSource();
-                bool success = orchestrator.RunBatchAsync(null, cts.Token).GetAwaiter().GetResult();
+                bool success = orchestrator.RunBatchAsync(null, cts.Token).GetAwaiter().GetResult(); // Sync call for now
                 return success ? Result.Success : Result.Failure;
             }
             catch (Exception ex)
