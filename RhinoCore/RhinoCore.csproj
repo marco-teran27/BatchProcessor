@@ -12,7 +12,7 @@
     <NoWarn>NU1701</NoWarn>
     
 	<!-- Enforce a 64 Bit build -->
-	<Platforms>AnyCPU;x64</Platforms>
+	<Platforms>x64</Platforms>
 	<Prefer32Bit>false</Prefer32Bit> 
   </PropertyGroup>
   
