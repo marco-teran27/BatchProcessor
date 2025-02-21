@@ -20,10 +20,11 @@
 	<PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
 	<PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
 	<PackageReference Include="Moq" Version="4.20.70" />
+	<PackageReference Include="System.Windows.Forms" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\BatchProcessor\BatchProcessor.csproj" />
+	<ProjectReference Include="..\RhinoCore\RhinoCore.csproj" />
 	<ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
 	<ProjectReference Include="..\Commons\Commons.csproj" />
 	<ProjectReference Include="..\DI\DI.csproj" />
