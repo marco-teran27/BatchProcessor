@@ -1,8 +1,10 @@
+// File: Batch\Core\TheOrchestrator.cs
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Commons; // For ITheOrchestrator, IRhinoCommOut
 using Commons.Interfaces;
-using ConfigJSON;
+using ConfigJSON; // For ConfigSelector, ConfigParser
 
 namespace Batch.Core
 {
@@ -24,13 +26,13 @@ namespace Batch.Core
             try
             {
                 _rhino.ShowMessage("Starting BatchProcessor...");
-                configPath ??= _selector.SelectConfigFile(); // Sync UI call
+                configPath ??= _selector.SelectConfigFile();
                 if (string.IsNullOrEmpty(configPath) || ct.IsCancellationRequested)
                 {
                     _rhino.ShowError("Configuration selection canceled.");
                     return false;
                 }
-                var config = await ConfigParser.ParseConfigAsync(configPath); // Static Call
+                var config = await _parser.ParseConfigAsync(configPath); // Instance method
                 _rhino.ShowMessage($"Config parsed from {config.FilePath}");
                 return true;
             }
