@@ -9,7 +9,7 @@ namespace ConfigJSON
 {
     public class ConfigParser
     {
-        public async Task<ConfigStructure> ParseConfigAsync(string filePath) // Changed to async
+        public static async Task<ConfigStructure> ParseConfigAsync(string filePath) // Changed to async
         {
             if (string.IsNullOrEmpty(filePath))
                 throw new ArgumentNullException(nameof(filePath), "Configuration file path cannot be null or empty.");
