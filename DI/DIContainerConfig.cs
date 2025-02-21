@@ -1,6 +1,6 @@
 // File: DI\DIContainerConfig.cs
 using Microsoft.Extensions.DependencyInjection;
-using Batch; // Updated from BatchProcessor.Batch
+using Batch.Core; // Updated from BatchProcessor.Batch
 using ConfigJSON;
 using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
 
@@ -22,7 +22,6 @@ namespace DI
 
             // Config pipeline
             services.AddSingleton<ConfigSelector>();
-            services.AddSingleton<ConfigParser>();
             services.AddSingleton<ITheOrchestrator, TheOrchestrator>();
 
             // Rhino communication output
