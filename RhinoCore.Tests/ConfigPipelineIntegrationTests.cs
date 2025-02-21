@@ -1,8 +1,7 @@
 // File: RhinoCore.Tests\ConfigPipelineIntegrationTests.cs
 using NUnit.Framework;
-using Rhino.Runtime.InProcess; // For out-of-process Rhino
+using RhinoInside; // Correct namespace
 using Microsoft.Extensions.DependencyInjection;
-using Commons;
 using RhinoCore.Plugin;
 using Commons.Interfaces;
 
@@ -11,10 +10,11 @@ namespace RhinoCore.Tests
     [TestFixture]
     public class ConfigPipelineIntegrationTests
     {
-        [SetUp]
-        public void Setup()
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
         {
-            RhinoInsideResolver.Initialize(); // Start Rhino out-of-process
+            Resolver.UseLatest = true; // Target Rhino 8
+            Resolver.Initialize(); // Start Rhino out-of-process
         }
 
         [Test]
@@ -22,13 +22,6 @@ namespace RhinoCore.Tests
         {
             var orchestrator = BatchProcessorPlugin.ServiceProvider.GetRequiredService<ITheOrchestrator>();
             Assert.That(orchestrator, Is.Not.Null, "Orchestrator should be resolved.");
-            // Simulate command with Rhino.Inside
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            RhinoInsideResolver.Shutdown();
         }
     }
 }
