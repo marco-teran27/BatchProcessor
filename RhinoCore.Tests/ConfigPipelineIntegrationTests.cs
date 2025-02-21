@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using Rhino.Testing;
-using DI.Interfaces;
+using Rhino.Commands;
+using Commons.Interfaces;
 using RhinoCore.Plugin;
 
-namespace BatchProcessorRhino.Tests
+namespace RhinoCore.Tests
 {
     [TestFixture]
     public class ConfigPipelineIntegrationTests
