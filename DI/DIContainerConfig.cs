@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Batch.Core; // For TheOrchestrator
 using Commons.Interfaces; // For ITheOrchestrator, IRhinoCommOut
 using ConfigJSON; // For ConfigSelector, ConfigParser
+using RhinoCore.Services; // For RhinoCommOut
 
 namespace DI
 {
@@ -12,9 +13,12 @@ namespace DI
         {
             var services = new ServiceCollection();
             services.AddSingleton<ConfigSelector>();
-            services.AddSingleton<ConfigParser>(); // Added back
+            services.AddSingleton<ConfigParser>();
             services.AddSingleton<ITheOrchestrator, TheOrchestrator>();
-            services.AddSingleton<IRhinoCommOut, NoOpRhinoCommOut>();
+            if (useRhino)
+                services.AddSingleton<IRhinoCommOut, RhinoCommOut>(); // Use RhinoCommOut when true
+            else
+                services.AddSingleton<IRhinoCommOut, NoOpRhinoCommOut>(); // Fallback
             return services.BuildServiceProvider();
         }
     }
