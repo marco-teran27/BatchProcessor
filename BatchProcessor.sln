@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchProcessor", "BatchProcessor\BatchProcessor.csproj", "{83266286-4160-49D9-ABEA-36496E0AB11A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Batch", "BatchProcessor\Batch.csproj", "{83266286-4160-49D9-ABEA-36496E0AB11A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{63DBA31C-CD5E-47CD-AC52-DD1255099A4F}"
 EndProject

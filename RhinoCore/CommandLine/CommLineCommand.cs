@@ -2,10 +2,10 @@ using Rhino.Commands;
 using System;
 using System.Threading;
 using BatchProcessor.DI.Interfaces;
-using BatchProcessorRhino.Plugin;
+using BatchProcessor.RhinoCore.Plugin;
 using Rhino;
 
-namespace RhinoCore.CommandLine
+namespace BatchProcessor.RhinoCore.CommandLine
 {
     /// <summary>
     /// Rhino command to initiate batch processing via "BatchProcessor".
@@ -24,7 +24,7 @@ namespace RhinoCore.CommandLine
         {
             try
             {
-                var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<IBatchOrchestrator>()
+                var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<ITheOrchestrator>()
                     ?? throw new InvalidOperationException("Failed to resolve IBatchOrchestrator.");
                 using var cts = new CancellationTokenSource();
                 bool success = orchestrator.RunBatchAsync(null, cts.Token).GetAwaiter().GetResult();

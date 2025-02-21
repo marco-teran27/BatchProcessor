@@ -12,7 +12,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model contains the script file name and type. Its validation is handled by
 /// the ScriptSettingsValidator in the validation modules.
 /// </summary>
-namespace ConfigJSON
+namespace BatchProcessor.ConfigJSON.Models
 {
     public class ScriptSettings
     {

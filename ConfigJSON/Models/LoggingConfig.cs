@@ -9,7 +9,7 @@ Summary: Represents logging configuration settings that control how logging is m
          Provides a Validate() method to check configuration integrity, returning a ValidationResult.
 */
 
-namespace ConfigJSON.Models
+namespace BatchProcessor.ConfigJSON.Models
 {
     /// <summary>
     /// Represents configuration settings for logging.

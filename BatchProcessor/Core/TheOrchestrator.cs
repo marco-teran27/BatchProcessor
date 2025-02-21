@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using DI.Interfaces;
-using ConfigJSON;
+using BatchProcessor.DI.Interfaces;
+using BatchProcessor.ConfigJSON;
 
-namespace BatchProcessor.Core
+namespace Batchprocessor.Batch.Core
 {
     /// <summary>
     /// Coordinates the configuration pipeline for batch processing.

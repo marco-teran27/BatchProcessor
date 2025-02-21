@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Commons;
-using DI.Interfaces;
+using BatchProcessor.DI.Interfaces;
 
-namespace ConfigJSON.Models
+namespace BatchProcessor.ConfigJSON.Models
 {
     /// <summary>
     /// Represents directory-related configuration settings.

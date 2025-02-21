@@ -5,7 +5,7 @@ Summary: Represents the top‐level JSON structure for the configuration file.
          Consolidates all sub‐models (directories, script settings, etc.) for one‐pass JSON parsing.
 */
 
-namespace ConfigJSON.Models
+namespace BatchProcessor.ConfigJSON.Models
 {
     /// <summary>
     /// Represents the complete configuration structure for batch processing.

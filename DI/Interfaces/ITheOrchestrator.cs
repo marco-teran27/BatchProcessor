@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace DI.Interfaces
+namespace BatchProcessor.DI.Interfaces
 {
     /// <summary>
     /// Defines the contract for orchestrating batch processing.

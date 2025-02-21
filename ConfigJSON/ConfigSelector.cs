@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace ConfigJSON
+namespace BatchProcessor.ConfigJSON
 {
     /// <summary>
     /// Provides a UI for selecting a JSON configuration file.

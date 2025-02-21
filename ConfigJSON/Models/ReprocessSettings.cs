@@ -11,7 +11,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model holds the reprocessing configuration (mode and reference log path).
 /// It no longer contains its own validation logic; use ReprocessValidator for validation.
 /// </summary>
-namespace ConfigJSON.Models
+namespace BatchProcessor.ConfigJSON.Models
 {
     public class ReprocessSettings
     {

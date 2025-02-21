@@ -1,4 +1,4 @@
-﻿namespace DI.Interfaces
+﻿namespace BatchProcessor.DI.Interfaces
 {
     /// <summary>
     /// Defines minimal Rhino interactions for output and script execution.

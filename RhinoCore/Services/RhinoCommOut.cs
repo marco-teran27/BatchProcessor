@@ -1,8 +1,8 @@
 // File: BatchProcessorRhino\Services\RhinoAppWrapper.cs
 using Rhino;
-using DI.Interfaces;
+using BatchProcessor.DI.Interfaces;
 
-namespace RhinoCore.Services
+namespace BatchProcessor.RhinoCore.Services
 {
     /// <summary>
     /// Implements Rhino interactions for batch processing.

@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BatchProcessor.DI;
 using System;
 
-namespace RhinoCore.Plugin
+namespace BatchProcessor.RhinoCore.Plugin
 {
     /// <summary>
     /// Rhino plugin for batch processing.

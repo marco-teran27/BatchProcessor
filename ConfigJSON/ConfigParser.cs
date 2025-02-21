@@ -4,7 +4,7 @@ using System.IO;
 using System.Text.Json;
 using ConfigJSON.Models;
 
-namespace ConfigJSON
+namespace BatchProcessor.ConfigJSON
 {
     /// <summary>
     /// Parses a JSON configuration file into a ConfigStructure object.
