@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI", "DI\DI.csproj", "{E2F0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Batch", "Batch\Batch.csproj", "{1DC90BEC-07CC-12B6-B323-A1B87B9945D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchLegacy", "BatchLegacy\BatchLegacy.csproj", "{3AB39A43-EDE1-447A-9377-34E8B63D7A51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,10 @@ Global
 		{1DC90BEC-07CC-12B6-B323-A1B87B9945D0}.Debug|x64.Build.0 = Debug|x64
 		{1DC90BEC-07CC-12B6-B323-A1B87B9945D0}.Release|x64.ActiveCfg = Release|x64
 		{1DC90BEC-07CC-12B6-B323-A1B87B9945D0}.Release|x64.Build.0 = Release|x64
+		{3AB39A43-EDE1-447A-9377-34E8B63D7A51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3AB39A43-EDE1-447A-9377-34E8B63D7A51}.Debug|x64.Build.0 = Debug|Any CPU
+		{3AB39A43-EDE1-447A-9377-34E8B63D7A51}.Release|x64.ActiveCfg = Release|Any CPU
+		{3AB39A43-EDE1-447A-9377-34E8B63D7A51}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
