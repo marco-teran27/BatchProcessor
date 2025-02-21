@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using BatchProcessor.DI.Interfaces.Config;
-using BatchProcessor.Core.Config.Validation;
+using Commons;
+using DI.Interfaces;
 
 namespace ConfigJSON.Models
 {

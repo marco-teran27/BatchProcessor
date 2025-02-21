@@ -1,12 +1,11 @@
 // File: BatchProcessor.DI\DIContainerConfig.cs
 using Microsoft.Extensions.DependencyInjection;
 using BatchProcessor.Core;
-using BatchProcessor.DI.Interfaces;
-using BatchProcessorRhino.Services;
-using ConfigJSON;
 using DI.Interfaces;
+using RhinoCore.Services;
+using ConfigJSON;
 
-namespace BatchProcessor.DI
+namespace DI
 {
     /// <summary>
     /// Configures dependency injection for the batch processor.
@@ -27,7 +26,7 @@ namespace BatchProcessor.DI
             services.AddSingleton<ITheOrchestrator, TheOrchestrator>();
 
             // Rhino integration
-            services.AddSingleton<IRhinoCommOut>(useRhino ? new RhinoAppWrapper() : new NoOpRhinoCommOut());
+            services.AddSingleton<IRhinoCommOut>(useRhino ? new RhinoCommOut() : new NoOpRhinoCommOut());
 
             return services.BuildServiceProvider();
         }

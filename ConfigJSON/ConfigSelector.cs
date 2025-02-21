@@ -1,4 +1,3 @@
-// File: ConfigJSON\ConfigSelector.cs
 using System;
 using System.Windows.Forms;
 

@@ -26,4 +26,11 @@
 		<PackageReference Include="System.Text.Json" Version="8.0.5" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\BatchProcessor\BatchProcessor.csproj" />
+		<ProjectReference Include="..\RhinoCore\RhinoCore.csproj" />
+		<ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
+		<ProjectReference Include="..\Commons\Commons.csproj" />
+	</ItemGroup>
+
 </Project>

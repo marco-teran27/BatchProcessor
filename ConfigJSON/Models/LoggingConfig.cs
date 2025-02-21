@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Commons;
 using BatchProcessor.Core.Config.Validation;
 
 /*

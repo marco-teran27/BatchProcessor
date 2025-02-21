@@ -1,8 +1,7 @@
-// File: BatchProcessor\Core\TheOrchestrator.cs
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using BatchProcessor.DI.Interfaces;
+using DI.Interfaces;
 using ConfigJSON;
 
 namespace BatchProcessor.Core
@@ -10,11 +9,11 @@ namespace BatchProcessor.Core
     /// <summary>
     /// Coordinates the configuration pipeline for batch processing.
     /// </summary>
-    public class TheOrchestrator : IBatchOrchestrator
+    public class TheOrchestrator : ITheOrchestrator
     {
         private readonly ConfigSelector _selector;
         private readonly ConfigParser _parser;
-        private readonly IRhinoIntegration _rhino;
+        private readonly IRhinoCommOut _rhino;
 
         /// <summary>
         /// Initializes a new instance of TheOrchestrator.
@@ -23,7 +22,7 @@ namespace BatchProcessor.Core
         /// <param name="parser">Config file parser.</param>
         /// <param name="rhino">Rhino integration interface.</param>
         /// <exception cref="ArgumentNullException">Thrown if any parameter is null.</exception>
-        public TheOrchestrator(ConfigSelector selector, ConfigParser parser, IRhinoIntegration rhino)
+        public TheOrchestrator(ConfigSelector selector, ConfigParser parser, IRhinoCommOut rhino)
         {
             _selector = selector ?? throw new ArgumentNullException(nameof(selector));
             _parser = parser ?? throw new ArgumentNullException(nameof(parser));

@@ -1,5 +1,6 @@
 using System;
 using System.Text.Json.Serialization;
+using Commons;
 using BatchProcessor.DI.Interfaces.Config;
 using BatchProcessor.Core.Config.Validation;
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json.Serialization;
+using Commons;
 using BatchProcessor.Core.Config.Validation;
 
 /// <summary>
