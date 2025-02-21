@@ -1,7 +1,7 @@
-﻿namespace DI.Interfaces
+﻿namespace Commons.Interfaces
 {
     /// <summary>
-    /// Defines minimal Rhino interactions for output and script execution.
+    /// Defines minimal Rhino command-line output interactions.
     /// </summary>
     public interface IRhinoCommOut
     {

@@ -1,9 +1,8 @@
-// File: BatchProcessor.DI\DIContainerConfig.cs
+// File: DI\DIContainerConfig.cs
 using Microsoft.Extensions.DependencyInjection;
-using Batch.Core;
-using DI.Interfaces;
-using RhinoCore.Services;
+using Batch; // Updated from BatchProcessor.Batch
 using ConfigJSON;
+using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
 
 namespace DI
 {
@@ -15,7 +14,8 @@ namespace DI
         /// <summary>
         /// Configures services for the application.
         /// </summary>
-        /// <param name="useRhino">True to use Rhino integration; false for no-op.</param>
+        /// <param name="useRhino">True to allow Rhino-specific implementations; false for no-op.</param>
+        /// <returns>The configured service provider.</returns>
         public static IServiceProvider ConfigureServices(bool useRhino = true)
         {
             var services = new ServiceCollection();
@@ -25,15 +25,15 @@ namespace DI
             services.AddSingleton<ConfigParser>();
             services.AddSingleton<ITheOrchestrator, TheOrchestrator>();
 
-            // Rhino integration
-            services.AddSingleton<IRhinoCommOut>(useRhino ? new RhinoCommOut() : new NoOpRhinoCommOut());
+            // Rhino communication output
+            services.AddSingleton<IRhinoCommOut, NoOpRhinoCommOut>();
 
             return services.BuildServiceProvider();
         }
     }
 
     /// <summary>
-    /// No-op implementation for non-Rhino environments.
+    /// No-op implementation of IRhinoCommOut for non-Rhino environments.
     /// </summary>
     internal class NoOpRhinoCommOut : IRhinoCommOut
     {

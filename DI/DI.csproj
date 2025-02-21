@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\BatchProcessor\Batch.csproj" />
+		<ProjectReference Include="..\Batch\Batch.csproj" />
 		<ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
 		<ProjectReference Include="..\Commons\Commons.csproj" />
 	</ItemGroup>

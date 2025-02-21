@@ -1,8 +1,10 @@
+// File: RhinoCore\CommandLine\CommLineCommand.cs
 using Rhino.Commands;
 using System;
 using System.Threading;
-using DI.Interfaces;
+using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
 using RhinoCore.Plugin;
+using Microsoft.Extensions.DependencyInjection;
 using Rhino;
 
 namespace RhinoCore.CommandLine
@@ -25,7 +27,7 @@ namespace RhinoCore.CommandLine
             try
             {
                 var orchestrator = BatchProcessorPlugin.ServiceProvider.GetService<ITheOrchestrator>()
-                    ?? throw new InvalidOperationException("Failed to resolve IBatchOrchestrator.");
+                    ?? throw new InvalidOperationException("Failed to resolve ITheOrchestrator.");
                 using var cts = new CancellationTokenSource();
                 bool success = orchestrator.RunBatchAsync(null, cts.Token).GetAwaiter().GetResult();
                 return success ? Result.Success : Result.Failure;

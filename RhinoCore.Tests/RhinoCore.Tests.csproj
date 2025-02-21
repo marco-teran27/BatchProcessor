@@ -24,7 +24,6 @@
 
   <ItemGroup>
 	<ProjectReference Include="..\RhinoCore\RhinoCore.csproj" />
-	<ProjectReference Include="..\ConfigJSON\ConfigJSON.csproj" />
 	<ProjectReference Include="..\Commons\Commons.csproj" />
 	<ProjectReference Include="..\DI\DI.csproj" />
   </ItemGroup>

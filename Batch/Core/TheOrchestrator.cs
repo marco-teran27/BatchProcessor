@@ -1,10 +1,11 @@
+// File: Batch\Core\TheOrchestrator.cs
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using DI.Interfaces;
 using ConfigJSON;
+using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
 
-namespace Batch.Core
+namespace Batch
 {
     /// <summary>
     /// Coordinates the configuration pipeline for batch processing.
@@ -18,10 +19,6 @@ namespace Batch.Core
         /// <summary>
         /// Initializes a new instance of TheOrchestrator.
         /// </summary>
-        /// <param name="selector">Config file selector.</param>
-        /// <param name="parser">Config file parser.</param>
-        /// <param name="rhino">Rhino integration interface.</param>
-        /// <exception cref="ArgumentNullException">Thrown if any parameter is null.</exception>
         public TheOrchestrator(ConfigSelector selector, ConfigParser parser, IRhinoCommOut rhino)
         {
             _selector = selector ?? throw new ArgumentNullException(nameof(selector));
@@ -32,9 +29,6 @@ namespace Batch.Core
         /// <summary>
         /// Runs the configuration pipeline asynchronously.
         /// </summary>
-        /// <param name="configPath">Optional config file path; if null, prompts user.</param>
-        /// <param name="ct">Cancellation token.</param>
-        /// <returns>True if successful; false otherwise.</returns>
         public async Task<bool> RunBatchAsync(string? configPath, CancellationToken ct)
         {
             try
