@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace BatchProcessor.Commons
+namespace Commons
 {
     /// <summary>
     /// -----------------------------------------------------------------------------

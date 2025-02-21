@@ -11,7 +11,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model holds the PID selection settings. It no longer performs its own validation;
 /// all validation is delegated to the corresponding validation module (PIDValidator).
 /// </summary>
-namespace BatchProcessor.ConfigJSON.Models
+namespace ConfigJSON.Models
 {
     public class PIDSettings
     {

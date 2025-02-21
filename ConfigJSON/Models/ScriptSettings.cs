@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json.Serialization;
 using Commons;
-using BatchProcessor.Core.Config.Validation;
+using Batch.Core.Config.Validation;
 
 /// <summary>
 /// Holds the script settings for batch processing.

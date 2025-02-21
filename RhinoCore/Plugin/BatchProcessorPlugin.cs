@@ -1,9 +1,9 @@
 ﻿using Rhino.PlugIns;
 using Microsoft.Extensions.DependencyInjection;
-using BatchProcessor.DI;
+using DI;
 using System;
 
-namespace BatchProcessor.RhinoCore.Plugin
+namespace RhinoCore.Plugin
 {
     /// <summary>
     /// Rhino plugin for batch processing.

@@ -6,7 +6,7 @@ using Rhino.Geometry;
 using Rhino.Input;
 using Rhino.Input.Custom;
 
-namespace BatchProcessor.RhinoCore.CommandLine
+namespace RhinoCore.CommandLine
 {
     public class BatchProcessorCommand : Command
     {

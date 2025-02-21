@@ -1,11 +1,11 @@
 using Rhino.Commands;
 using System;
 using System.Threading;
-using BatchProcessor.DI.Interfaces;
-using BatchProcessor.RhinoCore.Plugin;
+using DI.Interfaces;
+using RhinoCore.Plugin;
 using Rhino;
 
-namespace BatchProcessor.RhinoCore.CommandLine
+namespace RhinoCore.CommandLine
 {
     /// <summary>
     /// Rhino command to initiate batch processing via "BatchProcessor".

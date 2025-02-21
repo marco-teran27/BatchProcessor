@@ -1,5 +1,5 @@
 // File: Commons\ValidationResult.cs
-namespace BatchProcessor.Commons
+namespace Commons
 {
     /// <summary>
     /// Represents the outcome of a validation operation with success status and error messages.

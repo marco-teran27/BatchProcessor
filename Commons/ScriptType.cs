@@ -1,5 +1,5 @@
 // File: Commons\ScriptType.cs
-namespace BatchProcessor.Commons
+namespace Commons
 {
     /// <summary>
     /// Defines supported script types for batch processing.

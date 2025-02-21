@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 using Commons;
 using BatchProcessor.DI.Interfaces;
 
-namespace BatchProcessor.ConfigJSON.Models
+namespace ConfigJSON.Models
 {
     /// <summary>
     /// Represents directory-related configuration settings.

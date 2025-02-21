@@ -1,11 +1,11 @@
 // File: BatchProcessor.DI\DIContainerConfig.cs
 using Microsoft.Extensions.DependencyInjection;
-using BatchProcessor.Core;
-using BatchProcessor.DI.Interfaces;
-using BatchProcessor.RhinoCore.Services;
-using BatchProcessor.ConfigJSON;
+using Batch.Core;
+using DI.Interfaces;
+using RhinoCore.Services;
+using ConfigJSON;
 
-namespace BatchProcessor.DI
+namespace DI
 {
     /// <summary>
     /// Configures dependency injection for the batch processor.

@@ -1,10 +1,9 @@
-// File: ConfigJSON\ConfigParser.cs
 using System;
 using System.IO;
 using System.Text.Json;
 using ConfigJSON.Models;
 
-namespace BatchProcessor.ConfigJSON
+namespace ConfigJSON
 {
     /// <summary>
     /// Parses a JSON configuration file into a ConfigStructure object.

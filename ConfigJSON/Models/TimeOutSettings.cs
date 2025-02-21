@@ -1,8 +1,8 @@
 using System;
 using System.Text.Json.Serialization;
 using Commons;
-using BatchProcessor.DI.Interfaces.Config;
-using BatchProcessor.Core.Config.Validation;
+using DI.Interfaces;
+using Batch.Core.Config.Validation;
 
 /// <summary>
 /// Represents timeout settings for batch processing.
@@ -11,7 +11,7 @@ using BatchProcessor.Core.Config.Validation;
 /// This model contains the timeout value (in minutes) for batch processing.
 /// Validation is handled through the TimeOutValidator in the validation modules.
 /// </summary>
-namespace BatchProcessor.ConfigJSON.Models
+namespace ConfigJSON.Models
 {
     public class TimeOutSettings
     {
