@@ -10,6 +10,9 @@
 	<!-- Enforce a 64 Bit build -->
 	<Platforms>x64</Platforms>
 	<Prefer32Bit>false</Prefer32Bit>
+
+	<OutputPath>bin\x64\Debug\net7.0-windows\</OutputPath>
+	<BaseIntermediateOutputPath>obj\x64\Debug\net7.0-windows\</BaseIntermediateOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

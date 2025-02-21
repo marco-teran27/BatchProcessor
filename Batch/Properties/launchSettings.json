@@ -2,7 +2,7 @@
   "profiles": {
     "BatchProcessor": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\marco.teran\\source\\repos\\BatchProcessor\\BatchProcessor\\bin\\x64\\Debug\\net7.0-windows"
+      "workingDirectory": "C:\\Users\\marco.teran\\source\\repos\\BatchProcessor\\Batch\\bin\\x64\\Debug\\net7.0-windows"
     }
   }
 }
