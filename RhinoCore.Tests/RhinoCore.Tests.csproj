@@ -20,7 +20,9 @@
 	<PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
 	<PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
 	<PackageReference Include="Moq" Version="4.20.70" />
+	<PackageReference Include="Rhino.Inside" Version="7.0.0" />
 	<PackageReference Include="Rhino.Testing" Version="8.0.23-beta" />
+	<PackageReference Include="RhinoCommon" Version="8.16.25042.13001" />
   </ItemGroup>
 
   <ItemGroup>
