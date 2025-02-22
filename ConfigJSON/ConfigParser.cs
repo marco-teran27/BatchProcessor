@@ -1,5 +1,3 @@
-// File: ConfigJSON\ConfigParser.cs
-using System;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -9,21 +7,14 @@ namespace ConfigJSON
 {
     public class ConfigParser
     {
-        public async Task<ConfigStructure> ParseConfigAsync(string filePath) // Instance method
+        public async Task<ConfigStructure> ParseConfigAsync(string filePath)
         {
-            if (string.IsNullOrEmpty(filePath))
-                throw new ArgumentNullException(nameof(filePath), "Configuration file path cannot be null or empty.");
-
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException($"Configuration file not found: {filePath}", filePath);
-
-            string json = await File.ReadAllTextAsync(filePath);
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            var config = JsonSerializer.Deserialize<ConfigStructure>(json, options)
-                ?? throw new JsonException($"Failed to parse configuration from {filePath}");
-
-            config.FilePath = filePath;
-            return config;
+            using (var reader = new StreamReader(filePath))
+            {
+                string jsonString = await reader.ReadToEndAsync();
+                ConfigStructure? config = JsonSerializer.Deserialize<ConfigStructure>(jsonString);
+                return config ?? throw new JsonException("Failed to deserialize config file."); // Handle null
+            }
         }
     }
 }

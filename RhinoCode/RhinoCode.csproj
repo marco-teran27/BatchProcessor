@@ -5,11 +5,12 @@
         Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
         Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
     -->
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
 	<UseWindowsForms>true</UseWindowsForms>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <TargetExt>.rhp</TargetExt>
     <NoWarn>NU1701</NoWarn>
+	  <LangVersion>8.0</LangVersion>
     
 	<!-- Enforce a 64 Bit build -->
 	<Platforms>x64</Platforms>

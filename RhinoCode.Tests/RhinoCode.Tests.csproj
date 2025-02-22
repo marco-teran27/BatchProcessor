@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0-windows</TargetFramework>
-		<OutputType>Library</OutputType>
+		<TargetFramework>net48</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<LangVersion>8.0</LangVersion>
 
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
@@ -14,6 +13,7 @@
 		<!-- Enforce a 64 Bit build -->
 		<Platforms>x64</Platforms>
 		<Prefer32Bit>false</Prefer32Bit>
+		<OutputType>Library</OutputType>
 	</PropertyGroup>
 
   <ItemGroup>
@@ -35,7 +35,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<None Update="..\RhinoCode\bin\x64\$(Configuration)\net7.0-windows\RhinoCode.rhp">
+		<None Update="..\RhinoCode\bin\x64\$(Configuration)\net48\RhinoCode.rhp">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<Content Include="$(NuGetPackageRoot)\rhinocommon\8.16.25042.13001\lib\net48\RhinoCommon.dll">

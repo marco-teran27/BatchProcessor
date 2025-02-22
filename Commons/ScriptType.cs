@@ -1,4 +1,3 @@
-// File: Commons\ScriptType.cs
 namespace Commons
 {
     /// <summary>
