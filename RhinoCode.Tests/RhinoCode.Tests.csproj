@@ -2,6 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0-windows</TargetFramework>
+		<OutputType>Library</OutputType>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -34,19 +35,16 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<!-- Copy RhinoCode.rhp -->
 		<None Update="..\RhinoCode\bin\x64\$(Configuration)\net7.0-windows\RhinoCode.rhp">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<!-- Copy RhinoCommon.dll -->
 		<Content Include="$(NuGetPackageRoot)\rhinocommon\8.16.25042.13001\lib\net48\RhinoCommon.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-		<None Update="rhino.test.runsettings">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<!-- Copy rhino.testing.config.xml -->
 		<None Update="rhino.testing.config.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="rhino.test.runsettings">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>

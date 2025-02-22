@@ -1,9 +1,6 @@
 {
   "profiles": {
-    "RhinoCode.Launcher": {
-      "commandName": "Project"
-    },
-    "Profile 1": {
+    "RunRhinoTests": {
       "commandName": "Executable",
       "executablePath": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe",
       "commandLineArgs": "-nosplash\r\n-runscript \r\n\"_RunNunitTests RhinoCode.Tests.dll\"",
