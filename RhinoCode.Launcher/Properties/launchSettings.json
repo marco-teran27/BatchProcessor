@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "RhinoCode.Launcher": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe",
+      "commandLineArgs": "-nosplash",
+      "workingDirectory": "C:\\Users\\marco.teran\\source\\repos\\BatchProcessor\\RhinoCode.Tests\\bin\\x64\\Debug\\net7.0-windows"
+    }
+  }
+}

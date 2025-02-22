@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCode", "RhinoCode\Rhin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCode.Tests", "RhinoCode.Tests\RhinoCode.Tests.csproj", "{0FDEFEE0-A502-0A14-9202-16A1EE924E54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCode.Launcher", "RhinoCode.Launcher\RhinoCode.Launcher.csproj", "{2070D327-F961-4162-A5C7-DAE3B6E697D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -57,6 +59,10 @@ Global
 		{0FDEFEE0-A502-0A14-9202-16A1EE924E54}.Debug|x64.Build.0 = Debug|x64
 		{0FDEFEE0-A502-0A14-9202-16A1EE924E54}.Release|x64.ActiveCfg = Release|x64
 		{0FDEFEE0-A502-0A14-9202-16A1EE924E54}.Release|x64.Build.0 = Release|x64
+		{2070D327-F961-4162-A5C7-DAE3B6E697D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2070D327-F961-4162-A5C7-DAE3B6E697D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{2070D327-F961-4162-A5C7-DAE3B6E697D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{2070D327-F961-4162-A5C7-DAE3B6E697D6}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
