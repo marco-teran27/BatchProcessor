@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<!-- General test run configuration -->
+	<RunConfiguration>
+		<MaxCpuCount>0</MaxCpuCount>
+		<!-- Use all available CPUs -->
+		<TestSessionTimeout>60000</TestSessionTimeout>
+		<!-- 60s timeout -->
+	</RunConfiguration>
+	<!-- Disable code coverage for simplicity -->
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="XPlat Code Coverage" enabled="false" />
+		</DataCollectors>
+	</DataCollectionRunSettings>
+	<!-- Enable detailed logging -->
+	<LoggerRunSettings>
+		<Loggers>
+			<Logger friendlyName="console" enabled="true" />
+			<!-- Console output -->
+			<Logger friendlyName="blame" enabled="true" />
+			<!-- Detailed failure logs -->
+		</Loggers>
+	</LoggerRunSettings>
+</RunSettings>

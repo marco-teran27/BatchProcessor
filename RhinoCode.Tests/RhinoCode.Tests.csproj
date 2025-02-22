@@ -42,6 +42,9 @@
 		<Content Include="$(NuGetPackageRoot)\rhinocommon\8.16.25042.13001\lib\net48\RhinoCommon.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+		<None Update="rhino.test.runsettings">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 		<!-- Copy rhino.testing.config.xml -->
 		<None Update="rhino.testing.config.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -6,7 +6,7 @@
     "Profile 1": {
       "commandName": "Executable",
       "executablePath": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe",
-      "commandLineArgs": "-nosplash\r\n-runscript \"_TestRunner NUnit RhinoCode.Tests.dll\"",
+      "commandLineArgs": "-nosplash\r\n-runscript \r\n\"_RunNunitTests RhinoCode.Tests.dll\"",
       "workingDirectory": "C:\\Users\\marco.teran\\source\\repos\\BatchProcessor\\RhinoCode.Tests\\bin\\x64\\Debug\\net7.0-windows"
     }
   }
