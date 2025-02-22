@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigJSON", "ConfigJSON\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchProcessor.Tests", "BatchProcessor.Tests\BatchProcessor.Tests.csproj", "{FDC365E4-49C0-AB43-7256-66CC88A29831}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCore.Tests", "RhinoCore.Tests\RhinoCore.Tests.csproj", "{C23140DE-F7BB-4A9B-9627-1BCD47ED3033}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCode.Tests", "RhinoCore.Tests\RhinoCode.Tests.csproj", "{C23140DE-F7BB-4A9B-9627-1BCD47ED3033}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCore", "RhinoCore\RhinoCore.csproj", "{B5B859A0-7086-F687-2074-D8E9D0C01FFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCode", "RhinoCore\RhinoCode.csproj", "{B5B859A0-7086-F687-2074-D8E9D0C01FFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI", "DI\DI.csproj", "{E2F07CE8-0CF5-A53F-BB4A-8FFEB7CFC763}"
 EndProject

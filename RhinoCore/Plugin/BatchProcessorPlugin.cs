@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using Rhino.PlugIns;
 using DI; // For DIContainerConfig
 using Commons.Interfaces; // For IRhinoCommOut
-using RhinoCore.Services; // For RhinoCommOut
+using RhinoCode.Services; // For RhinoCommOut
 
-namespace RhinoCore.Plugin
+namespace RhinoCode.Plugin
 {
     public class BatchProcessorPlugin : PlugIn
     {

@@ -28,14 +28,14 @@
   </ItemGroup>
 	
   <ItemGroup>
-	<ProjectReference Include="..\RhinoCore\RhinoCore.csproj" />
+	<ProjectReference Include="..\RhinoCode\RhinoCode.csproj" />
 	<ProjectReference Include="..\Commons\Commons.csproj" />
 	<ProjectReference Include="..\DI\DI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
 	<!-- Copy RhinoCore.rhp -->
-	<None Update="..\RhinoCore\bin\x64\$(Configuration)\net7.0-windows\RhinoCore.rhp">
+	<None Update="..\RhinoCode\bin\x64\$(Configuration)\net7.0-windows\RhinoCode.rhp">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>
   </ItemGroup>

@@ -2,7 +2,7 @@
 using Rhino;
 using Commons.Interfaces; // Updated from BatchProcessor.DI.Interfaces
 
-namespace RhinoCore.Services
+namespace RhinoCode.Services
 {
     /// <summary>
     /// Implements Rhino command-line output interactions.

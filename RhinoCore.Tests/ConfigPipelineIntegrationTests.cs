@@ -2,10 +2,10 @@
 using NUnit.Framework;
 using RhinoInside; // Correct namespace
 using Microsoft.Extensions.DependencyInjection;
-using RhinoCore.Plugin;
+using RhinoCode.Plugin;
 using Commons.Interfaces;
 
-namespace RhinoCore.Tests
+namespace RhinoCode.Tests
 {
     [TestFixture]
     public class ConfigPipelineIntegrationTests

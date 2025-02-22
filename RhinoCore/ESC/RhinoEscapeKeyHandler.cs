@@ -1,7 +1,7 @@
 using System;
-using BatchProcessorRhino.Utils;
+using RhinoCode.Utils;
 
-namespace BatchProcessorRhino.ESC
+namespace RhinoCode.ESC
 {
     /// <summary>
     /// Handles the processing of the Escape key event in Rhino.

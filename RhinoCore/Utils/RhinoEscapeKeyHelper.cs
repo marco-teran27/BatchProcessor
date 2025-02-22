@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace BatchProcessorRhino.Utils
+namespace RhinoCode.Utils
 {
     public class RhinoEscapeKeyHelper
     {

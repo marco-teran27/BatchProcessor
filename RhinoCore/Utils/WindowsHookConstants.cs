@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BatchProcessorRhino.Utils
+namespace RhinoCode.Utils
 {
     /// <summary>
     /// Provides constant values used for Windows keyboard hook operations.

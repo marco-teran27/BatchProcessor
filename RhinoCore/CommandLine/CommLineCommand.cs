@@ -3,10 +3,10 @@ using System;
 using System.Threading;
 using Rhino;
 using Rhino.Commands;
-using RhinoCore.Plugin;
+using RhinoCode.Plugin;
 using Commons.Interfaces;
 
-namespace RhinoCore.CommandLine
+namespace RhinoCode.CommandLine
 {
     public class CommLineCommand : Command
     {
