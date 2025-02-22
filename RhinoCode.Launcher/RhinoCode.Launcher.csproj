@@ -10,7 +10,4 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RhinoCode.Tests\RhinoCode.Tests.csproj" />
-  </ItemGroup>
 </Project>
