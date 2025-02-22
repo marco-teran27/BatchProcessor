@@ -20,7 +20,7 @@
 	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 	<PackageReference Include="NUnit" Version="3.14.0" />
 	<PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
-	<PackageReference Include="Rhino.Inside" Version="7.0.0" />
+	<PackageReference Include="Rhino.Testing" Version="8.0.23-beta" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -33,11 +33,19 @@
 	<ProjectReference Include="..\DI\DI.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-	<!-- Copy RhinoCore.rhp -->
-	<None Update="..\RhinoCode\bin\x64\$(Configuration)\net7.0-windows\RhinoCode.rhp">
-		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	</None>
-  </ItemGroup>
+	<ItemGroup>
+		<!-- Copy RhinoCode.rhp -->
+		<None Update="..\RhinoCode\bin\x64\$(Configuration)\net7.0-windows\RhinoCode.rhp">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<!-- Copy RhinoCommon.dll -->
+		<Content Include="$(NuGetPackageRoot)\rhinocommon\8.16.25042.13001\lib\net48\RhinoCommon.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<!-- Copy rhino.testing.config.xml -->
+		<None Update="rhino.testing.config.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

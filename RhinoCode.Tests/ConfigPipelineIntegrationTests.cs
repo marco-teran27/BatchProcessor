@@ -1,22 +1,16 @@
-// File: RhinoCore.Tests\ConfigPipelineIntegrationTests.cs
+// File: RhinoCode.Tests\ConfigPipelineIntegrationTests.cs
 using NUnit.Framework;
-using RhinoInside; // Correct namespace
+using Rhino.Testing.Fixtures; // For RhinoTestFixtureAttribute
 using Microsoft.Extensions.DependencyInjection;
+using Commons;
 using RhinoCode.Plugin;
 using Commons.Interfaces;
 
 namespace RhinoCode.Tests
 {
-    [TestFixture]
+    [RhinoTestFixture] // Ensures Rhino is loaded during discovery
     public class ConfigPipelineIntegrationTests
     {
-        [OneTimeSetUp]
-        public void OneTimeSetUp()
-        {
-            Resolver.UseLatest = true; // Target Rhino 8
-            Resolver.Initialize(); // Start Rhino out-of-process
-        }
-
         [Test]
         public void Command_InvokesOrchestrator()
         {
