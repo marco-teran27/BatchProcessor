@@ -32,7 +32,7 @@ namespace Batch.Core
                     _rhino.ShowError("Configuration selection canceled.");
                     return false;
                 }
-                var config = await _parser.ParseConfigAsync(configPath); // Instance method
+                var config = await _parser.ParseConfigAsync(configPath!); // Null-forgiving operator
                 _rhino.ShowMessage($"Config parsed from {config.FilePath}");
                 return true;
             }
